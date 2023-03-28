@@ -1,0 +1,20 @@
+
+
+export const useSetupStore = defineStore('setup-store', () => {
+	const { bool: visible, setTrue: show, setFalse: hide } = useBoolean();
+
+	interface Config {
+		name: string
+	}
+	const config = reactive<Config>({ name: 'config' })
+	function setConfig(conf: Partial<Config>) {
+		Object.assign(config, conf)
+	}
+	return {
+		visible,
+		show,
+		hide,
+		config,
+		setConfig
+	};
+})
