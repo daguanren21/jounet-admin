@@ -22,3 +22,11 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# automatically
+
+/src/typings/components.d.ts
+/src/typings/auto-import.d.ts
+
+
+
